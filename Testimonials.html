@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <title>Document</title>
+    <style>
+        .container {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0;
+  }
+  
+  /* Clear floats after containers */
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+  .container img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+  /* Increase the font-size of a span element */
+  .container span {
+    font-size: 20px;
+    margin-right: 15px;
+  }
+  
+  /* Add media queries for responsiveness. This will center both the text and the image inside the container */
+  @media (max-width: 500px) {
+    .container {
+      text-align: center;
+    }
+  
+    .container img {
+      margin: auto;
+      float: none;
+      display: block;
+    }
+  }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="hi.jpg" alt="Avatar" style="width:90px">
+        <p><span>Ravi</span> ShopKeeper</p>
+        <p>The services are good.</p>
+      </div>
+      
+      <div class="container">
+        <img src="hi.jpg" alt="Avatar" style="width:90px">
+        <p><span >Raju</span> Driver</p>
+        <p>Workers are not good with patients.</p>
+      </div>
+</body>
+</html>
